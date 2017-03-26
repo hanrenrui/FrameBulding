@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import oysd.com.framebulding.R;
 import oysd.com.framebulding.view.fragment.BaseFragment;
@@ -23,9 +24,11 @@ import oysd.com.framebulding.view.fragment.BaseFragment;
 /**
  * MessageFragment
  */
-public class MessageFragment extends BaseFragment {
+public class MessageFragment extends BaseFragment implements View.OnClickListener {
 
     private View mContentView;
+
+    private Button btnOkHttp;
     public MessageFragment() {
 
     }
@@ -42,9 +45,34 @@ public class MessageFragment extends BaseFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         mContext = getActivity();
-        mContentView = inflater.inflate(R.layout.fragment_message_layout, container, false);
+        if(mContentView == null) {
+            mContentView = inflater.inflate(R.layout.fragment_message_layout, container, false);
+        }
+        initView();
         return mContentView;
     }
 
+    /**
+     * 初始化界面控件
+     */
+    private void initView(){
+        btnOkHttp = (Button) mContentView.findViewById(R.id.btnOkHttp);
 
+        btnOkHttp.setOnClickListener(this);
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.btnOkHttp:
+                testOkHttp();
+                break;
+        }
+    }
+
+    private void testOkHttp(){
+
+       // CommonOkHttpClient.
+    }
 }

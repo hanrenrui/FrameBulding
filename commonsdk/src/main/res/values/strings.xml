@@ -1,0 +1,15 @@
+<!--
+  ~ /**
+  ~  * *******************************************************
+  ~  *
+  ~  * @文件名称：strings.xml
+  ~  * @文件作者：ouyangshengduo Copyright(c) 2017. All rights reserved.
+  ~  * @创建时间：17-3-25 下午4:24
+  ~  * @文件描述：
+  ~  * @修改历史：Last modified 17-3-25 下午4:24 ********************************************************
+  ~  */
+  -->
+
+<resources>
+    <string name="app_name">OysdLibrary</string>
+</resources>
